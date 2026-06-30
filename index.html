@@ -189,7 +189,7 @@ function irSlide(n) {
   document.getElementById("slide"+n).style.display="block";
   if (n<=8) { document.getElementById("barraProgreso").style.width=(n*12.5)+"%"; document.getElementById("contadorQuiz").innerHTML="Pregunta "+n+" de 8"; }
   else { document.getElementById("barraProgreso").style.width="100%"; document.getElementById("contadorQuiz").innerHTML="Quiz completado"; document.getElementById("resultadoTexto").innerHTML="Has completado el quiz. Puntaje obtenido: <strong>"+puntaje+" de 8</strong>. Usa esta retroalimentación para fortalecer tu brief y moodboard."; }
-  document.getElementById("quizBriefMoodboard").scrollIntoView({behavior:"smooth", block:"start"});
+  /* Se mantiene la posición del scroll para evitar que Canvas regrese al inicio al cambiar de pregunta. */
 }
 </script>
 </body></html>
